@@ -1,0 +1,18 @@
+{
+    "name": "IntelliJ Test",
+    "image": "buildpack-deps:bookworm-curl",
+    "containerEnv": {
+      "WORKSPACE_DIR": "${containerWorkspaceFolder}"
+    },
+    "containerUser": "builder",
+    "remoteUser": "builder",
+    "features": {
+      "ghcr.io/devcontainers/features/common-utils:2": {
+        "installZsh": "true",
+        "username": "builder",
+        "userUid": "1000",
+        "userGid": "1000",
+        "upgradePackages": "true"
+      }
+    }
+  }
